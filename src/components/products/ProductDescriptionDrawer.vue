@@ -17,8 +17,8 @@
         </div>
 
         <div class="button-container">
-            <button class="remove">Remove</button>
-            <button class="add">Add</button>
+            <button class="remove" @click='removeFromCart'>Remove</button>
+            <button class="add" @click="addToCard">Add</button>
         </div>
     </div>
   </div>
@@ -30,6 +30,9 @@ export default {
     methods:{
         addToCard(){
             this.$store.commit('addToCard',this.product)
+        },
+        removeFromCart(){
+            this.$store.commit('removeFromCart',this.product)
         }
     },
     computed:{

@@ -6,7 +6,6 @@
       :active="active.product_drawer"
        @close-product-drawer="closeProductDrawer"
     />
-
     <div class="product-cards-container">
       <ProductSummaryCard
       v-for="product in items"

@@ -44,6 +44,7 @@ export default {
         p.text-muted{
             color: grey;
         }
+    }
 
         button.view-product-button{
             padding: 10px;
@@ -55,7 +56,6 @@ export default {
             border-radius: 5px;
             cursor:pointer
         }
-    }
 
     @media (min-width: 500px){
         .card{

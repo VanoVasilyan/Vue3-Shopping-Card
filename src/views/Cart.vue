@@ -1,5 +1,27 @@
 <template>
   <div class="about">
-    <h1>This is the Cart Page</h1>
+    <h1>Your Cart</h1>
+    <CartItemCard
+      v-for="product in products"
+      :key="product.id"
+      :product="product"
+    />
+    <CartSummaryPaymentCard 
+    />
   </div>
 </template>
+
+<script>
+  import CartItemCard from '../components/cart/CartItemCard.vue'
+  import CartSummaryPaymentCard from '../components/cart/CartSummaryPaymentCard.vue'
+export default {
+  components:{
+    CartItemCard,CartSummaryPaymentCard
+  },
+  computed : {
+    products(){
+      return this.$store.getters.cartItems
+    }
+  }
+}
+</script>
